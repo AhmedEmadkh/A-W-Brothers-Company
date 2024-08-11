@@ -184,15 +184,6 @@ section {
       @include graphText(1.5rem);
     }
   }
-  .share {
-    padding-top: 1rem;
-    border-top: $border;
-    margin-top: 1rem;
-    a {
-      @include iconBox();
-      margin: 0 0.3rem;
-    }
-  }
 }
 //End Header
 

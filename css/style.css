@@ -174,26 +174,6 @@ section {
   color: #666;
   line-height: 2;
 }
-.contact-info .share {
-  padding-top: 1rem;
-  border-top: 0.1rem solid rgba(0, 0, 0, 0.3);
-  margin-top: 1rem;
-}
-.contact-info .share a {
-  height: 5rem;
-  width: 5rem;
-  line-height: 5rem;
-  font-size: 2rem;
-  background-color: #eee;
-  color: #111;
-  cursor: pointer;
-  text-align: center;
-  margin: 0 0.3rem;
-}
-.contact-info .share a:hover {
-  background-color: #111;
-  color: #fff;
-}
 
 .home {
   padding: 0;
