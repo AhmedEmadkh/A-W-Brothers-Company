@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Favicon -->
+    <link rel="icon" href="./imgs/RPE9Gt01.svg" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap-reboot.min.css" />
+    <!-- SwiperJS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- LightGallery JS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css"
+    />
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Media CSS -->
+    <link rel="stylesheet" href="./css/media.css" />
+    <title>A W Brothers</title>
+  </head>
+  <body>
+    <!-- Start Header -->
+    <nav
+      class="header navbar navbar-expand-lg bg-body-tertiary position-fixed w-100 top-0 z-3"
+    >
+      <div class="container px-4 py-3 nav-animation">
+        <a class="navbar-brand logo" href="#"
+          >AW <span class="span-logo fw-bold">Brothers</span>
+          <span><img src="./imgs/verified.svg" alt="" /></span
+        ></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul
+            class="navbar-nav mx-auto my-2 my-lg-0 navbar-nav-scroll"
+            style="--bs-scroll-height: 100px"
+          >
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#services"
+                >Services</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#projects"
+                >Projects</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <div class="icons d-flex">
+            <div id="info-btn" class="fas fa-info-circle"></div>
+            <div id="moon-icon" class="fa-solid fa-moon"></div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="contact-info">
+      <div id="close-contact-info" class="fas fa-times"></div>
+
+      <div class="info">
+        <a href="tel:+0432711983"><i class="fas fa-phone"></i></a>
+        <h3>Phone Number</h3>
+        <p><a href="tel:+0432711983">0432 711 983</a></p>
+      </div>
+      <div class="info">
+        <i class="fas fa-envelope"></i>
+        <h3>Email Address</h3>
+        <p>test@gmail.com</p>
+      </div>
+      <div class="info">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>Office Address</h3>
+        <p>Based in Sydney NSW 2000</p>
+      </div>
+
+      <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-instagram"></a>
+      </div>
+    </div>
+    <!-- End Header -->
+
+    <!-- Start Home -->
+    <section id="home" class="home mt-5 pt-5">
+      <!-- Swiper -->
+      <div class="home-slider swiper">
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <section
+            class="swiper-slide slide"
+            style="background: url(imgs/home-slider01.jpg) no-repeat"
+          >
+            <div class="content">
+              <h3>We Provide Best Service</h3>
+              <p>
+                Welcome to A W Brothers, where we bring over 20 years of
+                experience in tile construction to your projects. Our expert
+                team delivers precision and quality with every tile
+                installation, ensuring your space looks exceptional and stands
+                the test of time.
+              </p>
+              <a href="#about" class="btn">Get Started</a>
+            </div>
+          </section>
+          <section
+            class="swiper-slide slide"
+            style="background: url(imgs/home-slider02.jpg) no-repeat"
+          >
+            <div class="content">
+              <h3>Make Dreams Come To Life</h3>
+              <p>
+                At A W Brothers, we specialize in top-tier tile construction
+                services backed by two decades of industry experience. Trust us
+                to handle your project with professionalism and meticulous
+                attention to detail.
+              </p>
+              <a href="#about" class="btn">Get Started</a>
+            </div>
+          </section>
+          <section
+            class="swiper-slide slide"
+            style="background: url(imgs/home-slider03.jpg) no-repeat"
+          >
+            <div class="content">
+              <h3>From Concept To Creation</h3>
+              <p>
+                With +20 years of excellence in tile construction, A W Brothers
+                is your go-to source for high-quality installations and superior
+                craftsmanship. Let us transform your space with our expertise
+                and dedication.
+              </p>
+              <a href="#about" class="btn">Get Started</a>
+            </div>
+          </section>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+    <!-- End Home -->
+
+    <!-- Start About -->
+    <section class="about" id="about">
+      <h1 class="heading">About Us</h1>
+      <div class="row">
+        <div class="video">
+          <video src="./imgs/aboutVid.mp4" loop muted autoplay></video>
+        </div>
+        <div class="content">
+          <h3>Wey will provide you the best work which you dreamt for!</h3>
+          <p>
+            A W Brothers has been a leader in the tile construction industry for
+            over 20 years, renowned for our commitment to quality and
+            craftsmanship. Our team of experienced professionals is dedicated to
+            providing exceptional service, from the initial consultation to the
+            final installation. We pride ourselves on our ability to delve into
+            the details and deliver the ultimate results, ensuring every project
+            meets the highest standards of excellence and durability.
+          </p>
+          <a href="#services" class="btn">Read More</a>
+        </div>
+      </div>
+      <div class="box-container">
+        <div class="box">
+          <h3>20+</h3>
+          <p>Years Of Experience</p>
+        </div>
+
+        <div class="box">
+          <h3>650+</h3>
+          <p>Project Completed</p>
+        </div>
+
+        <div class="box">
+          <h3>40+</h3>
+          <p>Active Workers</p>
+        </div>
+      </div>
+    </section>
+    <!-- End About -->
+
+    <!-- Start Services -->
+    <section class="services" id="services">
+      <h1 class="heading">Our Services</h1>
+      <div class="box-container">
+        <!-- Service Category: Bathroom -->
+        <div class="service-category">
+          <div class="category-header">
+            <i class="fa-solid fa-bath"></i> Bathroom
+            <i class="fa-solid fa-chevron-down toggle-icon"></i>
+          </div>
+          <ul class="subcategory-list">
+            <li>Complete Bathroom Renovation</li>
+            <li>Tilers</li>
+            <li>Cabinet Makers</li>
+            <li>Waterproofers</li>
+            <li>Vanity Installation</li>
+            <li>Builder</li>
+            <li>Repairs</li>
+            <li>Basin Installation</li>
+            <li>Toilet Installation</li>
+            <li>Bath Installation</li>
+            <li>Shower Installation</li>
+            <li>Design</li>
+            <li>Bathroom Resurfacing</li>
+          </ul>
+        </div>
+        <!-- Service Category: Floor Coatings -->
+        <div class="service-category">
+          <div class="category-header">
+            <i class="fa-solid fa-paint-roller"></i> Floor Coatings
+            <i class="fa-solid fa-chevron-down toggle-icon"></i>
+          </div>
+          <ul class="subcategory-list">
+            <li>Epoxy Floor Coating</li>
+          </ul>
+        </div>
+        <!-- Service Category: Pool Builders -->
+        <div class="service-category">
+          <div class="category-header">
+            <i class="fa-solid fa-swimming-pool"></i> Pool Builders
+            <i class="fa-solid fa-chevron-down toggle-icon"></i>
+          </div>
+          <ul class="subcategory-list">
+            <li>Repairs</li>
+          </ul>
+        </div>
+        <!-- Service Category: Tilers -->
+        <div class="service-category">
+          <div class="category-header">
+            <i class="fa-solid fa-tachometer-alt"></i> Tilers
+            <i class="fa-solid fa-chevron-down toggle-icon"></i>
+          </div>
+          <ul class="subcategory-list">
+            <li>Wall Tiling</li>
+            <li>Floor Tiling</li>
+            <li>Tile Removal</li>
+            <li>Mosaic</li>
+            <li>Tile & Grout Cleaning</li>
+            <li>Outdoor Paving</li>
+            <li>Bathroom Tiling</li>
+            <li>Kitchen Tiling</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- End Services -->
+
+    <!-- Start Projects -->
+    <section class="projects" id="projects">
+      <h1 class="heading">Our Projects</h1>
+
+      <div class="box-container">
+        <a href="imgs/projects01.jpg" class="box">
+          <div class="image">
+            <img src="imgs/projects01.jpg" alt="" />
+          </div>
+          <div class="content">
+            <div class="info">
+              <h3>Design Vision</h3>
+              <p>Precision Applied</p>
+            </div>
+            <i class="fas fa-plus"></i>
+          </div>
+        </a>
+        <a href="imgs/projects02.jpg" class="box">
+          <div class="image">
+            <img src="imgs/projects02.jpg" alt="" />
+          </div>
+          <div class="content">
+            <div class="info">
+              <h3>Foundation Laid</h3>
+              <p>Style Refined</p>
+            </div>
+            <i class="fas fa-plus"></i>
+          </div>
+        </a>
+        <a href="imgs/projects03.jpg" class="box">
+          <div class="image">
+            <img src="imgs/projects03.jpg" alt="" />
+          </div>
+          <div class="content">
+            <div class="info">
+              <h3>Elegant Crafting</h3>
+              <p>Work Advancing</p>
+            </div>
+            <i class="fas fa-plus"></i>
+          </div>
+        </a>
+        <a href="imgs/projects04.jpg" class="box">
+          <div class="image">
+            <img src="imgs/projects04.jpg" alt="" />
+          </div>
+          <div class="content">
+            <div class="info">
+              <h3>Progress Underway</h3>
+              <p>Progress in Motion</p>
+            </div>
+            <i class="fas fa-plus"></i>
+          </div>
+        </a>
+        <a href="imgs/projects05.jpg" class="box">
+          <div class="image">
+            <img src="imgs/projects05.jpg" alt="" />
+          </div>
+          <div class="content">
+            <div class="info">
+              <h3>Concept Creation</h3>
+              <p>Construction Underway</p>
+            </div>
+            <i class="fas fa-plus"></i>
+          </div>
+        </a>
+        <a href="imgs/projects06.jpg" class="box">
+          <div class="image">
+            <img src="imgs/projects06.jpg" alt="" />
+          </div>
+          <div class="content">
+            <div class="info">
+              <h3>Dream Realized</h3>
+              <p>Change Evolving</p>
+            </div>
+            <i class="fas fa-plus"></i>
+          </div>
+        </a>
+      </div>
+    </section>
+    <!-- End Projects -->
+
+    <!-- Start Contacts -->
+    <section id="contact" class="contact">
+      <h1 class="heading fw-bold">Contact Us</h1>
+        <div class="container overflow-hidden">
+            <div class="row">
+                <div class="col-lg-6">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26502.208804968835!2d151.18938035635577!3d-33.86966068644912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae3b0ae3e93f%3A0x1c017d6b3fba8770!2sHaymarket%20NSW%202000%2C%20Australia!5e0!3m2!1sen!2seg!4v1723391326390!5m2!1sen!2seg"
+                    width="100%"
+                    height="450"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+                <div class="col-lg-6 d-flex justify-content-center align-items-center tele">
+                    <div class="info">
+                        <a href="tel:+0432711983"><i class="fas fa-phone"></i></a>
+                        <h3>Give Us A Call</h3>
+                        <p><a href="tel:+0432711983">0432 711 983</a></p>
+                      </div>
+                </div>
+              </div>
+        </div>
+    </section>
+    <!-- End Contacts -->
+
+    <!-- Start Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-verified">
+            <img src="./imgs/verified.svg" alt="Verified" />
+          </div>
+          <div class="footer-info">
+            <p>
+              ABN:
+              <a
+                href="https://abr.business.gov.au/ABN/View/13609526098"
+                id="abn-link"
+                target="_blank"
+                >13609526098</a
+              >
+            </p>
+            <p>
+              NSW Fair Trading Number:
+              <a
+                href="https://www.onegov.nsw.gov.au/publicregister/#/publicregister/categories"
+                id="nsw-fair-trading-link"
+                target="_blank"
+                >250683C</a
+              >
+            </p>
+          </div>
+          <div class="footer-bottom">
+            <p>
+              &copy; 2024 A W
+              <span style="color: #f5bf23; font-weight: bold">Brothers</span>.
+              All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- BootstrapJS -->
+    <script src="./JS/bootstrap.bundle.min.js"></script>
+    <!-- SwiperJS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- LightGallery JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- MainJS -->
+    <script src="./JS/main.js"></script>
+  </body>
+</html>
