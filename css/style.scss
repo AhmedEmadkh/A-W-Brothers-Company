@@ -123,16 +123,6 @@ section {
     }
 
     #seal {
-      // display: inline-block;
-      // font-size: 0.8rem; // Very small font size
-      // padding: 0.2rem 0.4rem;
-      // margin-left: 0.5rem;
-      // border-radius: 0.2rem;
-      // background-color: $light-bg; // Default background color
-      // color: $black; // Default text color
-      // font-weight: bold;
-      // text-transform: uppercase;
-      // text-align: center;
       font-size: 0.8em;
       color: black;
       margin-right: 0.5rem;
@@ -142,6 +132,23 @@ section {
         color: $dark-text;
       }
     }
+    #seal2 {
+      display: inline-block;
+      font-size: 0.8rem; // Very small font size
+      padding: 0.2rem 0.4rem;
+      margin-left: 0.1rem;
+      border-radius: 0.2rem;
+      background-color: $light-bg; // Default background color
+      color: $black; // Default text color
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+      .dark-mode & {
+        background-color: $dark-bg;
+        color: $dark-text;
+      }
+    }
+
   }
 
   .nav-link {
@@ -763,9 +770,5 @@ section {
 
   .home .slide {
     justify-content: center;
-
-    .content {
-      display: none;
-    }
   }
 }

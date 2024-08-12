@@ -81,6 +81,22 @@ section {
 .dark-mode .header .logo #seal {
   color: #ddd;
 }
+.header .logo #seal2 {
+  display: inline-block;
+  font-size: 0.8rem;
+  padding: 0.2rem 0.4rem;
+  margin-left: 0.1rem;
+  border-radius: 0.2rem;
+  background-color: #eee;
+  color: #111;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+.dark-mode .header .logo #seal2 {
+  background-color: #333;
+  color: #ddd;
+}
 .header .nav-link {
   font-size: 2rem;
   color: #111;
@@ -649,8 +665,5 @@ section {
   }
   .home .slide {
     justify-content: center;
-  }
-  .home .slide .content {
-    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
