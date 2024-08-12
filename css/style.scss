@@ -59,7 +59,7 @@ $dark-box-shadow: 0 0.5rem rgba(0, 0, 0, 0.3); // Dark mode shadow color
   transition: all 0.3s linear;
 }
 .nav-animation {
-    transition: all 0.5s ease-in-out; /* Smooth transition for all properties */
+  transition: all 0.5s ease-in-out; /* Smooth transition for all properties */
 }
 
 html {
@@ -108,40 +108,69 @@ section {
 }
 
 //--------------------------------------------------------------------
-//Start Header
+// Start Header
 .header {
   box-shadow: $box-shadow;
   background: $white;
-}
 
-.logo {
-  @include titleText(2.5rem);
-  span {
-    color: $yellow;
+  .logo {
+    @include titleText(2.5rem);
+    display: flex;
+    align-items: center;
+
+    span {
+      color: $yellow; // Default color for company name
+    }
+
+    #seal {
+      // display: inline-block;
+      // font-size: 0.8rem; // Very small font size
+      // padding: 0.2rem 0.4rem;
+      // margin-left: 0.5rem;
+      // border-radius: 0.2rem;
+      // background-color: $light-bg; // Default background color
+      // color: $black; // Default text color
+      // font-weight: bold;
+      // text-transform: uppercase;
+      // text-align: center;
+      font-size: 0.8em;
+      color: black;
+      margin-right: 0.5rem;
+      // Dark mode adjustments
+      .dark-mode & {
+        // background-color: $dark-bg;
+        color: $dark-text;
+      }
+    }
+  }
+
+  .nav-link {
+    @include titleText(2rem);
+    margin: 0 1rem;
+
+    &:hover {
+      color: $yellow;
+    }
+  }
+
+  .icons div {
+    @include iconBox();
+    margin-left: 0.3rem;
+  }
+
+  .navbar-toggler {
+    @include iconBox();
+    &:focus {
+      outline: 0;
+      border: none;
+    }
+    border: none !important;
   }
 }
-.nav-link {
-  @include titleText(2rem);
-  margin: 0 1rem;
+// End Header
 
-  &:hover {
-    color: $yellow;
-  }
-}
-.icons div {
-  @include iconBox();
-  margin-left: 0.3rem;
-}
-
-.navbar-toggler {
-  @include iconBox();
-  &:focus {
-    outline: 0;
-    border: none;
-  }
-  border: none !important;
-}
-
+//----------------------------------------------------------------
+//Start Contact Info
 .contact-info {
   position: fixed;
   top: 0;
@@ -185,7 +214,7 @@ section {
     }
   }
 }
-//End Header
+//End Contact Info
 
 //--------------------------------------------------------------------
 // Start Home
@@ -257,7 +286,6 @@ section {
 
 //--------------------------------------------------------------------
 // Start About
-
 .about {
   .row {
     display: flex;
@@ -421,74 +449,101 @@ section {
 
 //--------------------------------------------------------------------
 // Start Contacts
-
 .contact {
-    .info {
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    a {
       display: flex;
-      flex-direction: column;
       align-items: center;
-      text-align: center;
-  
+      font-size: 2rem;
+      color: $black;
+      text-decoration: none;
+
+      i {
+        font-size: 3rem;
+        background-color: $yellow;
+        color: $white;
+        border-radius: 50%;
+        padding: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      &:hover i {
+        background-color: $black;
+        color: $yellow;
+      }
+    }
+
+    h3 {
+      @include titleText(2rem);
+      margin: 1rem 0;
+    }
+
+    p {
+      @include graphText(1.5rem);
+
       a {
-        display: flex;
-        align-items: center;
-        font-size: 2rem;
-        color: $black;
+        color: $yellow;
         text-decoration: none;
-  
-        i {
-          font-size: 3rem;
-          background-color: $yellow;
-          color: $white;
-          border-radius: 50%;
-          padding: 1rem;
-          margin-bottom: 1rem;
-        }
-  
-        &:hover i {
-          background-color: $black;
-          color: $yellow;
-        }
-      }
-  
-      h3 {
-        @include titleText(2rem);
-        margin: 1rem 0;
-      }
-  
-      p {
-        @include graphText(1.5rem);
-  
-        a {
-          color: $yellow;
-          text-decoration: none;
-  
-          &:hover {
-            text-decoration: underline;
-          }
+
+        &:hover {
+          text-decoration: underline;
         }
       }
     }
   }
+}
 
-
-  // Define keyframes for ringing effect
+// Define keyframes for ringing effect
 @keyframes ringing {
-    0% { transform: rotate(0); }
-    10% { transform: rotate(10deg); }
-    20% { transform: rotate(-10deg); }
-    30% { transform: rotate(10deg); }
-    40% { transform: rotate(-10deg); }
-    50% { transform: rotate(0); }
-    100% { transform: rotate(0); }
+  0% {
+    transform: rotate(0);
   }
+  10% {
+    transform: rotate(10deg);
+  }
+  20% {
+    transform: rotate(-10deg);
+  }
+  30% {
+    transform: rotate(10deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
 
-  // Apply animation to phone icon in dark mode
-    .contact .info a i {
-    animation: ringing 1s infinite; // Adjust the duration and iteration as needed
-    }
-  
-  
+// Apply animation to phone icon in dark mode
+.contact .info a i {
+  animation: ringing 1s infinite; // Adjust the duration and iteration as needed
+}
+
+// Define keyframes for email animation (e.g., bouncing)
+@keyframes bouncing {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+// Apply animation to email icon
+.contact .info a i.fa-envelope {
+  animation: bouncing 1s infinite;
+}
+
 // End Contacts
 
 //--------------------------------------------------------------------
@@ -534,144 +589,142 @@ section {
 }
 /* End Footer */
 
-
 // Dark mode styles
 .dark-mode {
-    background-color: $dark-bg;
+  background-color: $dark-bg;
+  color: $dark-text;
+
+  // Update specific sections for dark mode
+  .header {
+    background-color: $black !important;
     color: $dark-text;
-  
-    // Update specific sections for dark mode
-    .header {
-      background-color: $black !important;
+
+    .nav-link {
       color: $dark-text;
-  
-      .nav-link {
-        color: $dark-text;
-  
-        &:hover {
-          color: $yellow;
-        }
-      }
-      
-      .logo {
-        color: $white;
-        
-        span {
-          color: $yellow;
-        }
+
+      &:hover {
+        color: $yellow;
       }
     }
-  
-    .home .content {
-      h3 {
-        color: $white;
-      }
-      
-      p {
-        color: $light-bg;
+
+    .logo {
+      color: $white;
+
+      span {
+        color: $yellow;
       }
     }
-  
-    .home .slide::before {
-      background: linear-gradient(90deg, $dark-bg, transparent);
-    }
-  
-    .projects {
-      background-color: $black; // Adjusted background color
-  
-      .heading {
-        color: $white;
-      }
-  
-      .content {
-        h3 {
-          color: $white;
-        }
-        
-        p {
-          color: $light-bg;
-        }
-      }
-    }
-  
-    .about {
-      background-color: $black; // Adjusted background color
-  
-      .heading {
-        color: $white;
-      }
-  
-      .content {
-        h3 {
-          color: $white;
-        }
-        
-        p {
-          color: $light-bg;
-        }
-      }
-    }
-  
-    .services {
-      background-color: $dark-bg; // Adjusted background color
-  
-      .heading {
-        color: $white;
-      }
-      
-      .box-container .service-category .category-header {
-        color: $black !important;
-      }
-      .box-container .service-category .subcategory-list li{
-          color: $black;
-      }
-    }
-  
-    // Adjust contact info
-    .contact {
-      background-color: $dark-bg;
-        
-      .heading{
-        color: $white;
-      }
-      .info a {
-        color: $white;
-  
-        i {
-          background-color: $yellow;
-          color: $black;
-        }
-  
-        &:hover i {
-          background-color: $black;
-          color: $yellow;
-        }
-      }
-      
-      h3 {
-        color: $white;
-      }
-      
-      p {
-        color: $light-bg;
-      }
-    }
-    .footer {
-        background-color: $black;
-        color: $dark-text;
-      }
-    
-      .btn {
-        background: $yellow;
-        color: $black;
-    
-        &:hover {
-          background: $black;
-          color: $yellow;
-        }
-      }
   }
-  
+
+  .home .content {
+    h3 {
+      color: $white;
+    }
+
+    p {
+      color: $light-bg;
+    }
+  }
+
+  .home .slide::before {
+    background: linear-gradient(90deg, $dark-bg, transparent);
+  }
+
+  .projects {
+    background-color: $black; // Adjusted background color
+
+    .heading {
+      color: $white;
+    }
+
+    .content {
+      h3 {
+        color: $white;
+      }
+
+      p {
+        color: $light-bg;
+      }
+    }
+  }
+
+  .about {
+    background-color: $black; // Adjusted background color
+
+    .heading {
+      color: $white;
+    }
+
+    .content {
+      h3 {
+        color: $white;
+      }
+
+      p {
+        color: $light-bg;
+      }
+    }
+  }
+
+  .services {
+    background-color: $dark-bg; // Adjusted background color
+
+    .heading {
+      color: $white;
+    }
+
+    .box-container .service-category .category-header {
+      color: $black !important;
+    }
+    .box-container .service-category .subcategory-list li {
+      color: $black;
+    }
+  }
+
+  // Adjust contact info
+  .contact {
+    background-color: $dark-bg;
+
+    .heading {
+      color: $white;
+    }
+    .info a {
+      color: $white;
+
+      i {
+        background-color: $yellow;
+        color: $black;
+      }
+
+      &:hover i {
+        background-color: $black;
+        color: $yellow;
+      }
+    }
+
+    h3 {
+      color: $white;
+    }
+
+    p {
+      color: $light-bg;
+    }
+  }
+  .footer {
+    background-color: $black;
+    color: $dark-text;
+  }
+
+  .btn {
+    background: $yellow;
+    color: $black;
+
+    &:hover {
+      background: $black;
+      color: $yellow;
+    }
+  }
+}
 
 // Media Queries
 
@@ -690,17 +743,29 @@ section {
   section {
     padding: 3rem 2rem;
   }
-  .contact .tele{
+  .contact .tele {
     margin-top: 2rem;
   }
 }
 
 @media (max-width: 768px) {
+  .logo {
+    width: 1rem; // Adjust as needed
+    padding: 0.5rem; // Adjust padding as needed
+    #seal {
+      display: none !important;
+    }
+  }
+  #img img {
+    width: 50%; // Adjust as needed for smaller screens
+    height: auto; // Maintain aspect ratio
+  }
+
   .home .slide {
     justify-content: center;
 
     .content {
-        display: none;
+      display: none;
     }
   }
 }

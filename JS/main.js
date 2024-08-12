@@ -1,24 +1,27 @@
-//Variables
+// Variables
 let contactInfo = document.querySelector('.contact-info');
-let infoBtn = document.querySelector('#info-btn');
-let CloseBtn = document.querySelector('#close-contact-info');
+let infoBtns = document.querySelectorAll('.info-btn');
+let closeBtns = document.querySelectorAll('.close-contact-info');
 
-
-//Open the contact info
-
-infoBtn.onclick = ()=>{
+// Function to open the contact info
+infoBtns.forEach(button => {
+  button.onclick = () => {
     contactInfo.classList.add('active');
-}
+  };
+});
 
-//Close the contact info
-
-CloseBtn.onclick = ()=>{
+// Function to close the contact info
+closeBtns.forEach(button => {
+  button.onclick = () => {
     contactInfo.classList.remove('active');
-}
+  };
+});
 
-window.onscroll = ()=>{
-    contactInfo.classList.remove('active');
-}
+// Close contact info on scroll
+window.onscroll = () => {
+  contactInfo.classList.remove('active');
+};
+
 
 // Swiper
 var swiper = new Swiper(".home-slider", {
@@ -52,16 +55,17 @@ lightGallery(document.querySelector('.projects .box-container'));
 
 // Dark Mode
 document.addEventListener('DOMContentLoaded', () => {
-    const moonIcon = document.getElementById('moon-icon');
-    const darkModeClass = 'dark-mode';
-  
-    // Check local storage for dark mode preference
-    if (localStorage.getItem('dark-mode') === 'enabled') {
-      document.body.classList.add(darkModeClass);
-    }
-  
-    // Toggle dark mode on icon click
-    moonIcon.addEventListener('click', () => {
+  const moonIcons = document.querySelectorAll('.moon-icon'); // Using class selector
+  const darkModeClass = 'dark-mode';
+
+  // Check local storage for dark mode preference
+  if (localStorage.getItem('dark-mode') === 'enabled') {
+    document.body.classList.add(darkModeClass);
+  }
+
+  // Toggle dark mode on icon click
+  moonIcons.forEach(icon => {
+    icon.addEventListener('click', () => {
       document.body.classList.toggle(darkModeClass);
       
       // Save the preference in local storage
@@ -72,6 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+});
 
 
 // Animation on the navbar
@@ -103,5 +108,30 @@ document.addEventListener('DOMContentLoaded', () => {
 }
 window.addEventListener('scroll', checkScrollPosition);
   
+
+
+//Customize Navbar According To the Screen Size
+document.addEventListener('DOMContentLoaded', function () {
+  function updateNavbar() {
+    const navbarMobile = document.getElementById('navbar-mobile');
+    const navbarDesktop = document.getElementById('navbar-desktop');
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth < 990) {
+      navbarMobile.style.display = 'flex';
+      navbarDesktop.style.display = 'none';
+    } else {
+      navbarMobile.style.display = 'none';
+      navbarDesktop.style.display = 'flex';
+    }
+  }
+
+  // Initial call to set the correct navbar
+  updateNavbar();
+
+  // Call the function on window resize
+  window.addEventListener('resize', updateNavbar);
+});
+
 
   

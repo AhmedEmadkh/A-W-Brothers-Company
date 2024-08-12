@@ -63,27 +63,34 @@ section {
   box-shadow: 0 0.5rem rgba(0, 0, 0, 0.1);
   background: #fff;
 }
-
-.logo {
+.header .logo {
   font-size: 2.5rem;
   color: #111;
   text-transform: capitalize;
+  display: flex;
+  align-items: center;
 }
-.logo span {
+.header .logo span {
   color: #f5bf23;
 }
-
-.nav-link {
+.header .logo #seal {
+  font-size: 0.8em;
+  color: black;
+  margin-right: 0.5rem;
+}
+.dark-mode .header .logo #seal {
+  color: #ddd;
+}
+.header .nav-link {
   font-size: 2rem;
   color: #111;
   text-transform: capitalize;
   margin: 0 1rem;
 }
-.nav-link:hover {
+.header .nav-link:hover {
   color: #f5bf23;
 }
-
-.icons div {
+.header .icons div {
   height: 5rem;
   width: 5rem;
   line-height: 5rem;
@@ -94,12 +101,11 @@ section {
   text-align: center;
   margin-left: 0.3rem;
 }
-.icons div:hover {
+.header .icons div:hover {
   background-color: #111;
   color: #fff;
 }
-
-.navbar-toggler {
+.header .navbar-toggler {
   height: 5rem;
   width: 5rem;
   line-height: 5rem;
@@ -110,11 +116,11 @@ section {
   text-align: center;
   border: none !important;
 }
-.navbar-toggler:hover {
+.header .navbar-toggler:hover {
   background-color: #111;
   color: #fff;
 }
-.navbar-toggler:focus {
+.header .navbar-toggler:focus {
   outline: 0;
   border: none;
 }
@@ -455,6 +461,18 @@ section {
   animation: ringing 1s infinite;
 }
 
+@keyframes bouncing {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.contact .info a i.fa-envelope {
+  animation: bouncing 1s infinite;
+}
+
 /* Start Footer */
 .footer {
   background-color: #111;
@@ -618,6 +636,17 @@ section {
   }
 }
 @media (max-width: 768px) {
+  .logo {
+    width: 1rem;
+    padding: 0.5rem;
+  }
+  .logo #seal {
+    display: none !important;
+  }
+  #img img {
+    width: 50%;
+    height: auto;
+  }
   .home .slide {
     justify-content: center;
   }
