@@ -70,6 +70,11 @@ section {
   display: flex;
   align-items: center;
 }
+.header .logo .logo-img {
+  width: 5rem;
+  height: auto;
+  margin-left: 0.5rem;
+}
 .header .logo span {
   color: #f5bf23;
 }
@@ -356,54 +361,27 @@ section {
   transform: rotate(180deg);
 }
 
-.projects .box-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  gap: 2rem;
-}
-.projects .box-container .box {
-  cursor: initial;
-  border-radius: 5px;
-  overflow: hidden;
-}
-.projects .box-container .box:hover .image img {
-  transform: scale(1.1);
-}
-.projects .box-container .box .image {
-  height: 40rem;
-  overflow: hidden;
-}
-.projects .box-container .box .image img {
-  height: 100%;
+.projects .box-container .swiper-slide {
   width: 100%;
-}
-.projects .box-container .box .content {
+  height: 500px;
   display: flex;
-  gap: 5rem;
-  background: #eee;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
 }
-.projects .box-container .box .content .info {
-  padding: 1rem 2rem;
+.projects .box-container .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-.projects .box-container .box .content .info h3 {
-  font-size: 1.7rem;
-  color: #111;
-  text-transform: capitalize;
+.projects .box-container .swiper-wrapper {
+  display: flex;
 }
-.projects .box-container .box .content .info p {
-  font-size: 1.5rem;
-  color: #666;
-  line-height: 2;
-}
-.projects .box-container .box .content i {
-  width: 7.5rem;
-  font-size: 3rem;
-  background: #f5bf23;
+.projects .box-container .swiper-button-next,
+.projects .box-container .swiper-button-prev {
   color: #fff;
-  cursor: pointer;
-  text-align: center;
-  line-height: 7.5rem;
 }
 
 .contact .info {

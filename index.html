@@ -9,7 +9,7 @@
       rel="stylesheet"
     />
     <!-- Favicon -->
-    <link rel="icon" href="./imgs/RPE9Gt01.svg" />
+    <link rel="icon" href="./imgs/favi icon.svg" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="./css/all.min.css" />
     <!-- Bootstrap -->
@@ -42,7 +42,7 @@
         <a class="navbar-brand logo fw-bold" href="#">
           AW <span class="span-logo fw-bold mx-2">Brothers</span>
           <span id="seal" class="fw-light">PTY LTD</span>
-          <span id="img"><img src="./imgs/verified.svg" alt="" /></span>
+          <span id="img" class="logo-img"><img src="./imgs/logo.svg" alt="" /></span>
         </a>
         <div class="collapse navbar-collapse" id="navbarScroll">
           <ul
@@ -105,7 +105,7 @@
         <a class="navbar-brand logo fw-bold" href="#">
           AW <span class="span-logo fw-bold mx-2">Brothers</span>
           <span id="seal2" class="fw-light">PTY LTD</span>
-          <span id="img"><img src="./imgs/verified.svg" alt="" /></span>
+          <span id="img" class="logo-img"><img src="./imgs/logo.svg" alt="" /></span>
         </a>
         <div class="icons d-flex">
           <button
@@ -171,7 +171,9 @@
         <p><a href="tel:+0432711983">0432 711 983</a></p>
       </div>
       <div class="info">
-        <a href="facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="facebook.com" target="_blank"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
         <h3>Facebook Page</h3>
         <p>test@gmail.com</p>
       </div>
@@ -252,7 +254,7 @@
           <video src="./imgs/aboutVid.mp4" loop muted autoplay></video>
         </div>
         <div class="content">
-          <h3>Wey will provide you the best work which you dreamt for!</h3>
+          <h3>We will provide you the best work which you dreamt for!</h3>
           <p>
             A W Brothers has been a leader in the tile construction industry for
             over 20 years, renowned for our commitment to quality and
@@ -355,81 +357,66 @@
     <section class="projects" id="projects">
       <h1 class="heading">Our Projects</h1>
 
-      <div class="box-container">
-        <a href="imgs/projects01.jpg" class="box">
-          <div class="image">
-            <img src="imgs/projects01.jpg" alt="" />
-          </div>
-          <div class="content">
-            <div class="info">
-              <h3>Design Vision</h3>
-              <p>Precision Applied</p>
+      <!-- Swiper for Box Container -->
+      <div class="box-container mx-auto swiper" id="box-container">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="./imgs/projects01.jpg"
+                class="d-block w-100"
+                alt="Project 1"
+              />
             </div>
-            <i class="fas fa-plus"></i>
-          </div>
-        </a>
-        <a href="imgs/projects02.jpg" class="box">
-          <div class="image">
-            <img src="imgs/projects02.jpg" alt="" />
-          </div>
-          <div class="content">
-            <div class="info">
-              <h3>Foundation Laid</h3>
-              <p>Style Refined</p>
+            <div class="swiper-slide">
+              <img
+                src="./imgs/projects02.jpg"
+                class="d-block w-100"
+                alt="Project 2"
+              />
             </div>
-            <i class="fas fa-plus"></i>
-          </div>
-        </a>
-        <a href="imgs/projects03.jpg" class="box">
-          <div class="image">
-            <img src="imgs/projects03.jpg" alt="" />
-          </div>
-          <div class="content">
-            <div class="info">
-              <h3>Elegant Crafting</h3>
-              <p>Work Advancing</p>
+            <div class="swiper-slide">
+              <img
+                src="./imgs/projects03.jpg"
+                class="d-block w-100"
+                alt="Project 3"
+              />
             </div>
-            <i class="fas fa-plus"></i>
-          </div>
-        </a>
-        <a href="imgs/projects04.jpg" class="box">
-          <div class="image">
-            <img src="imgs/projects04.jpg" alt="" />
-          </div>
-          <div class="content">
-            <div class="info">
-              <h3>Progress Underway</h3>
-              <p>Progress in Motion</p>
+            <div class="swiper-slide">
+              <img
+                src="./imgs/projects04.jpg"
+                class="d-block w-100"
+                alt="Project 1"
+              />
             </div>
-            <i class="fas fa-plus"></i>
-          </div>
-        </a>
-        <a href="imgs/projects05.jpg" class="box">
-          <div class="image">
-            <img src="imgs/projects05.jpg" alt="" />
-          </div>
-          <div class="content">
-            <div class="info">
-              <h3>Concept Creation</h3>
-              <p>Construction Underway</p>
+            <div class="swiper-slide">
+              <img
+                src="./imgs/projects05.jpg"
+                class="d-block w-100"
+                alt="Project 2"
+              />
             </div>
-            <i class="fas fa-plus"></i>
-          </div>
-        </a>
-        <a href="imgs/projects06.jpg" class="box">
-          <div class="image">
-            <img src="imgs/projects06.jpg" alt="" />
-          </div>
-          <div class="content">
-            <div class="info">
-              <h3>Dream Realized</h3>
-              <p>Change Evolving</p>
+            <div class="swiper-slide">
+              <img
+                src="./imgs/projects06.jpg"
+                class="d-block w-100"
+                alt="Project 3"
+              />
             </div>
-            <i class="fas fa-plus"></i>
+            <!-- Add More Here -->
           </div>
-        </a>
+
+          <!-- If Needed -->
+          <!-- <div class="swiper-pagination"></div> -->
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <div class="swiper-scrollbar"></div>
+        </div>
       </div>
     </section>
+
     <!-- End Projects -->
 
     <!-- Start Contacts -->

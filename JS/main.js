@@ -22,36 +22,30 @@ window.onscroll = () => {
   contactInfo.classList.remove('active');
 };
 
-
-// Swiper
+// Home Swiper
 var swiper = new Swiper(".home-slider", {
-    loop:true,
-    grabCursor:true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-
-// Slider With Jquery
-  $(document).ready(function() {
-    $('.category-header').on('click', function() {
-        var $this = $(this);
-        var $subcategories = $this.next('.subcategory-list');
-
-        // Close all other subcategories
-        $('.subcategory-list').not($subcategories).slideUp().prev('.category-header').removeClass('open');
-
-        // Toggle the clicked subcategories
-        $subcategories.slideToggle();
-        $this.toggleClass('open');
-    });
+  loop: true,
+  grabCursor: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
 
+// Slider With jQuery
+$(document).ready(function() {
+  $('.category-header').on('click', function() {
+    var $this = $(this);
+    var $subcategories = $this.next('.subcategory-list');
 
-// LightGallery JS
-lightGallery(document.querySelector('.projects .box-container'));
+    // Close all other subcategories
+    $('.subcategory-list').not($subcategories).slideUp().prev('.category-header').removeClass('open');
 
+    // Toggle the clicked subcategories
+    $subcategories.slideToggle();
+    $this.toggleClass('open');
+  });
+});
 
 // Dark Mode
 document.addEventListener('DOMContentLoaded', () => {
@@ -67,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
   moonIcons.forEach(icon => {
     icon.addEventListener('click', () => {
       document.body.classList.toggle(darkModeClass);
-      
+
       // Save the preference in local storage
       if (document.body.classList.contains(darkModeClass)) {
         localStorage.setItem('dark-mode', 'enabled');
@@ -78,40 +72,37 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-
 // Animation on the navbar
-  let hasLoggedPastHalf = false;
-  function checkScrollPosition() {
-    const section = document.getElementById('home');
-    const sectionHeight = section.offsetHeight;
-    const sectionTop = section.getBoundingClientRect().top;
-    const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    const viewportHeight = window.innerHeight;
+let hasLoggedPastHalf = false;
+function checkScrollPosition() {
+  const section = document.getElementById('home');
+  const sectionHeight = section.offsetHeight;
+  const sectionTop = section.getBoundingClientRect().top;
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  const viewportHeight = window.innerHeight;
 
-    // Calculate the midpoint of the section
-    const sectionMidpoint = sectionTop + sectionHeight / 2;
+  // Calculate the midpoint of the section
+  const sectionMidpoint = sectionTop + sectionHeight / 2;
 
-    // Check if scrolled past the halfway point
-    if (scrollTop + viewportHeight / 2 >= sectionMidpoint) {
-        if (!hasLoggedPastHalf) {
-            document.querySelector('.nav-animation').classList.remove('px-4')
-            document.querySelector('.nav-animation').classList.remove('py-3')
-            hasLoggedPastHalf = true;
-        }
-    } else {
-        if (hasLoggedPastHalf) {
-            document.querySelector('.nav-animation').classList.add('px-4')
-            document.querySelector('.nav-animation').classList.add('py-3')
-            hasLoggedPastHalf = false;
-        }
+  // Check if scrolled past the halfway point
+  if (scrollTop + viewportHeight / 2 >= sectionMidpoint) {
+    if (!hasLoggedPastHalf) {
+      document.querySelector('.nav-animation').classList.remove('px-md-4');
+      document.querySelector('.nav-animation').classList.remove('px-md-3');
+      hasLoggedPastHalf = true;
     }
+  } else {
+    if (hasLoggedPastHalf) {
+      document.querySelector('.nav-animation').classList.add('px-md-4');
+      document.querySelector('.nav-animation').classList.add('px-md-3');
+      hasLoggedPastHalf = false;
+    }
+  }
 }
 window.addEventListener('scroll', checkScrollPosition);
-  
 
-
-//Customize Navbar According To the Screen Size
-document.addEventListener('DOMContentLoaded', function () {
+// Customize Navbar According To the Screen Size
+document.addEventListener('DOMContentLoaded', function() {
   function updateNavbar() {
     const navbarMobile = document.getElementById('navbar-mobile');
     const navbarDesktop = document.getElementById('navbar-desktop');
@@ -134,4 +125,30 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-  
+//Project Swipper
+var boxSwiper = new Swiper('#box-container .swiper', {
+  slidesPerView: 3,
+  spaceBetween: 10,
+  pagination: {
+    el: '#box-container .swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '#box-container .swiper-button-next',
+    prevEl: '#box-container .swiper-button-prev',
+  },
+  scrollbar: {
+    el: '#box-container .swiper-scrollbar',
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    620: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
+});

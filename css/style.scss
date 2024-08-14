@@ -117,7 +117,11 @@ section {
     @include titleText(2.5rem);
     display: flex;
     align-items: center;
-
+    .logo-img{
+      width: 5rem;
+      height: auto;
+      margin-left: 0.5rem;
+    }
     span {
       color: $yellow; // Default color for company name
     }
@@ -148,7 +152,6 @@ section {
         color: $dark-text;
       }
     }
-
   }
 
   .nav-link {
@@ -402,54 +405,32 @@ section {
 // Start Projects
 .projects {
   .box-container {
-    @include grid(30rem);
-
-    .box {
-      cursor: initial;
-      border-radius: 5px;
+    .swiper-slide {
+      width: 100%;
+      height: 500px; // Adjust height
+      display: flex;
+      align-items: center;
+      justify-content: center;
       overflow: hidden;
-      &:hover .image img {
-        transform: scale(1.1);
-      }
-
-      .image {
-        height: 40rem;
-        overflow: hidden;
-
-        img {
-          height: 100%;
-          width: 100%;
-        }
-      }
-      .content {
-        display: flex;
-        gap: 5rem;
-        background: $light-bg;
-        justify-content: space-between;
-
-        .info {
-          padding: 1rem 2rem;
-
-          h3 {
-            @include titleText(1.7rem);
-          }
-
-          p {
-            @include graphText(1.5rem);
-          }
-        }
-        i {
-          width: 7.5rem;
-          font-size: 3rem;
-          background: $yellow;
-          color: $white;
-          cursor: pointer;
-          text-align: center;
-          line-height: 7.5rem;
-        }
+      position: relative;
+  
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
     }
+  
+    .swiper-wrapper {
+      display: flex;
+    }
+  
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #fff;
+    }
   }
+  
 }
 
 // End Projects
