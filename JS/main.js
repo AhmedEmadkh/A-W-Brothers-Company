@@ -127,6 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //Project Swipper
 var boxSwiper = new Swiper('#box-container .swiper', {
+  loop: true,
   slidesPerView: 3,
   spaceBetween: 10,
   pagination: {
